@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #101010;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    padding: 10px 15px;
+    background: #181818;
+    border-bottom: 1px solid #333;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+/* Panel Desplegable */
+.panel-desplegable {
+    background: #222;
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 1px solid #333;
+}
+
+.panel-desplegable summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #32d15a;
+    outline: none;
+    user-select: none;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.grupo-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-inputs h3 {
+    font-size: 0.9rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #181818;
+    color: white;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #32d15a;
+    outline: none;
+}
+
+button{
+    padding: 12px;
+    background: #32d15a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover{
+    background: #28b84c;
+}
+
+/* Área Principal de visualización */
+#main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 70px);
+}
+
+/* Barra para los contadores de viewers (Compacto) */
+#viewers-bar {
+    width: 100%;
+    height: 60px; /* Altura suficiente para mostrar logo y número */
+    display: grid;
+    gap: 2px;
+    background: #000;
+    border-bottom: 2px solid #222;
+}
+
+#viewers-bar:empty {
+    display: none; /* No ocupa espacio si está vacío */
+}
+
+/* Área de los chats */
+#viewer{
+    width: 100%;
+    flex: 1;
+    display: grid;
+    gap: 2px;
+    background: #000;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #111;
+}
+
+.oculto{
+    display: none;
+}
