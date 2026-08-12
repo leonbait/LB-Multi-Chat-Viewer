@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LB Multi Chat Viewer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://leonbait.github.io/LB-Multi-Chat-Viewer/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="style/styles.css">
+
+    <!-- Meta etiquetas primarias -->
+    <meta name="title" content="LB Multi Chat Viewer">
+    <meta name="description" content="Visualiza múltiples chats de streaming y contadores de viewers en una sola pantalla sin necesidad de un segundo monitor.">
+
+    <!-- Open Graph / Facebook / WhatsApp / Discord / Telegram -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://leonbait.github.io/LB-Multi-Chat-Viewer/">
+    <meta property="og:title" content="LB Multi Chat Viewer">
+    <meta property="og:description" content="Visualiza múltiples chats de streaming y contadores de viewers en una sola pantalla sin necesidad de un segundo monitor.">
+    <meta property="og:image" content="https://leonbait.github.io/LB-Multi-Chat-Viewer/images/logo.png">
+
+    <!-- Twitter / X -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://leonbait.github.io/LB-Multi-Chat-Viewer/">
+    <meta property="twitter:title" content="LB Multi Chat Viewer">
+    <meta property="twitter:description" content="Visualiza múltiples chats de streaming y contadores de viewers en una sola pantalla sin necesidad de un segundo monitor.">
+    <meta property="twitter:image" content="https://leonbait.github.io/LB-Multi-Chat-Viewer/images/logo.png">
+</head>
+
+<body>
+
+    <header>
+        <h1>LB Multi Chat Viewer</h1>
+
+        <!-- Panel Desplegable para inputs -->
+        <details class="panel-desplegable">
+            <summary>Configurar URLs (Chats y Viewers)</summary>
+            
+            <div class="inputs-container">
+                <div class="grupo-inputs">
+                    <h3>Chats</h3>
+                    <input id="url1" placeholder="URL Chat 1">
+                    <input id="url2" placeholder="URL Chat 2">
+                    <input id="url3" placeholder="URL Chat 3">
+                </div>
+
+                <div class="grupo-inputs">
+                    <h3>Contadores de Viewers</h3>
+                    <input id="viewerUrl1" placeholder="URL Viewer Count 1">
+                    <input id="viewerUrl2" placeholder="URL Viewer Count 2">
+                    <input id="viewerUrl3" placeholder="URL Viewer Count 3">
+                </div>
+
+                <button onclick="cargarChats()">Cargar / Actualizar</button>
+            </div>
+        </details>
+    </header>
+
+    <!-- Contenedor general para chats y viewers -->
+    <main id="main-container">
+        <div id="viewers-bar"></div>
+        <div id="viewer"></div>
+    </main>
+
+    <script src="script/main.js"></script>
+</body>
+</html>
