@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>LB Multi Chat Viewer</title>
+
+    <link
+        rel="icon"
+        href="https://leonbait.github.io/LB-Multi-Chat-Viewer/images/Logo.png"
+        type="image/png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style/styles.css"
+    >
+
+    <meta
+        name="title"
+        content="LB Multi Chat Viewer"
+    >
+
+    <meta
+        name="description"
+        content="Visualiza múltiples chats de streaming y contadores de viewers en una sola pantalla."
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         AMBIENTE / FONDO
+    ====================================================== -->
+
+    <div class="ambient ambient-one"></div>
+
+    <div class="ambient ambient-two"></div>
+
+    <div class="noise"></div>
+
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="topbar">
+
+
+        <div class="brand-lockup">
+
+
+            <div class="brand-mark">
+                LB
+            </div>
+
+
+            <div>
+
+                <div class="brand-name">
+                    LB Multi Chat
+                </div>
+
+                <div class="brand-caption">
+                    STREAM COMMAND CENTER
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="topbar-status">
+
+            <span class="status-dot"></span>
+
+            <span>
+                LOCAL • PRIVADO
+            </span>
+
+        </div>
+
+
+    </header>
+
+
+
+   
+
+    <main class="app-shell">
+
+
+        <!-- =================================================
+             CONFIGURACIÓN
+        ================================================== -->
+
+        <section class="config-card">
+
+
+            <div class="config-heading">
+
+
+                <div>
+
+
+                    <span class="eyebrow">
+                        Configuración rápida
+                    </span>
+
+
+                    <h1>
+                        Tu centro de control para el chat
+                    </h1>
+
+
+                    <p>
+                        Conecta hasta 3 chats y 3 contadores.
+                        Tus URLs quedan guardadas en este dispositivo.
+                    </p>
+
+
+                </div>
+
+
+                <div class="config-badge">
+                    6 slots
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =============================================
+                 PANEL DESPLEGABLE
+            ============================================== -->
+
+            <details
+                class="panel-desplegable"
+                open
+            >
+
+
+                <summary>
+
+
+                    <span class="summary-icon">
+                        +
+                    </span>
+
+
+                    <span>
+                        Configurar fuentes
+                    </span>
+
+
+                    <span class="summary-hint">
+                        Abrir / cerrar
+                    </span>
+
+
+                </summary>
+
+
+
+                <div class="inputs-container">
+
+
+                    <!-- =====================================
+                         CHATS
+                    ====================================== -->
+
+                    <div class="input-group-block">
+
+
+                        <div class="group-title-row">
+
+
+                            <div>
+
+
+                                <span class="group-kicker">
+                                    01
+                                </span>
+
+
+                                <h2>
+                                    Chats
+                                </h2>
+
+
+                            </div>
+
+
+                            <span class="group-count">
+                                3 disponibles
+                            </span>
+
+
+                        </div>
+
+
+
+                        <div class="field-grid">
+
+
+                            <label class="field-wrap">
+
+                                <span>
+                                    Chat 01
+                                </span>
+
+                                <input
+                                    id="url1"
+                                    autocomplete="off"
+                                    placeholder="https://..."
+                                >
+
+                            </label>
+
+
+
+                            <label class="field-wrap">
+
+                                <span>
+                                    Chat 02
+                                </span>
+
+                                <input
+                                    id="url2"
+                                    autocomplete="off"
+                                    placeholder="https://..."
+                                >
+
+                            </label>
+
+
+
+                            <label class="field-wrap">
+
+                                <span>
+                                    Chat 03
+                                </span>
+
+                                <input
+                                    id="url3"
+                                    autocomplete="off"
+                                    placeholder="https://..."
+                                >
+
+                            </label>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <!-- =====================================
+                         VIEWERS
+                    ====================================== -->
+
+                    <div class="input-group-block">
+
+
+                        <div class="group-title-row">
+
+
+                            <div>
+
+
+                                <span class="group-kicker">
+                                    02
+                                </span>
+
+
+                                <h2>
+                                    Contadores de viewers
+                                </h2>
+
+
+                            </div>
+
+
+                            <span class="group-count">
+                                3 disponibles
+                            </span>
+
+
+                        </div>
+
+
+
+                        <div class="field-grid">
+
+
+                            <label class="field-wrap">
+
+                                <span>
+                                    Viewer 01
+                                </span>
+
+                                <input
+                                    id="viewerUrl1"
+                                    autocomplete="off"
+                                    placeholder="https://..."
+                                >
+
+                            </label>
+
+
+
+                            <label class="field-wrap">
+
+                                <span>
+                                    Viewer 02
+                                </span>
+
+                                <input
+                                    id="viewerUrl2"
+                                    autocomplete="off"
+                                    placeholder="https://..."
+                                >
+
+                            </label>
+
+
+
+                            <label class="field-wrap">
+
+                                <span>
+                                    Viewer 03
+                                </span>
+
+                                <input
+                                    id="viewerUrl3"
+                                    autocomplete="off"
+                                    placeholder="https://..."
+                                >
+
+                            </label>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         ACCIONES
+                    ====================================== -->
+
+                    <div class="config-actions">
+
+
+                        <div class="save-note">
+
+
+                            <span class="save-icon">
+                                ✓
+                            </span>
+
+
+                            <span>
+                                Se guarda automáticamente
+                                en tu navegador.
+                            </span>
+
+
+                        </div>
+
+
+
+                        <button
+                            class="load-button"
+                            onclick="cargarChats()"
+                        >
+
+                            <span>
+                                Actualizar panel
+                            </span>
+
+
+                            <span class="button-arrow">
+                                →
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </details>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             WORKSPACE
+        ================================================== -->
+
+        <section
+            class="workspace"
+            aria-label="Área de visualización"
+        >
+
+
+            <div class="workspace-topline">
+
+
+                <div class="workspace-title">
+
+
+                    <span class="live-pill">
+
+
+                        <span class="live-dot"></span>
+
+
+                        LIVE WORKSPACE
+
+
+                    </span>
+
+
+                    <span id="source-summary">
+
+                        Sin fuentes conectadas
+
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="workspace-hint">
+
+                    Añade tus URLs arriba para comenzar
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =============================================
+                 ÁREA PRINCIPAL
+            ============================================== -->
+
+            <div id="main-container">
+
+
+
+                <!-- =========================================
+                     ESTADO VACÍO
+                ========================================== -->
+
+                <div
+                    id="empty-state"
+                    class="empty-state"
+                >
+
+
+                    <div class="empty-orbit empty-orbit-one"></div>
+
+                    <div class="empty-orbit empty-orbit-two"></div>
+
+                    <div class="empty-card-glow"></div>
+
+
+
+                    <div class="empty-symbol">
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </div>
+
+
+
+                    <span class="eyebrow">
+
+                        Workspace listo
+
+                    </span>
+
+
+
+                    <h2>
+
+                        Tu pantalla está lista
+                        para recibir chats.
+
+                    </h2>
+
+
+
+                    <p>
+
+                        Agrega una o varias URLs desde
+                        la configuración. El layout se
+                        adaptará automáticamente a la
+                        cantidad de fuentes conectadas.
+
+                    </p>
+
+
+
+                    <div class="empty-features">
+
+
+                        <div>
+
+                            <span>
+                                01
+                            </span>
+
+                            Multi-chat
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                02
+                            </span>
+
+                            Viewers
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                03
+                            </span>
+
+                            Responsive
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <a
+                        href="#url1"
+                        class="empty-cta"
+                        onclick="
+                            document.querySelector('.panel-desplegable').open = true;
+                            setTimeout(
+                                () => document.getElementById('url1').focus(),
+                                50
+                            );
+                            return false;
+                        "
+                    >
+
+                        Configurar primera fuente
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     VIEWERS
+                ========================================== -->
+
+                <div id="viewers-bar"></div>
+
+
+
+                <!-- =========================================
+                     CHATS
+                ========================================== -->
+
+                <div id="viewer"></div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+
+        <span>
+            ©2026 Leonbait
+        </span>
+
+
+        <span>
+            Diseñado para streaming en una sola pantalla.
+        </span>
+
+
+    </footer>
+
+
+
+    <script src="script/main.js"></script>
+
+
+</body>
+
+</html>
